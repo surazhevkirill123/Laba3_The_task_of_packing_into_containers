@@ -40,14 +40,15 @@ namespace Laba3_The_task_of_packing_into_containers
 
             }
 
+            int emptyContainers = 0;
             for (int j = 0; j < containers.Count(); j++)
             {
-                for (int k = 0; k < containers[j].Count(); k++)
+                if (containers[j].Sum() == 0)
                 {
-                    Console.Write(containers[j][k] + " ");
+                    emptyContainers++;
                 }
-                Console.WriteLine();
             }
+            Console.WriteLine(containers.Count() - emptyContainers);
 
         }
     }
